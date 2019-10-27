@@ -1,0 +1,4 @@
+name: storybook-graphql-example
+recipe: drupal8
+config:
+  webroot: web

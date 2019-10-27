@@ -1,3 +1,10 @@
+Install DirEnv
+
+composer install
+drush site-install minimal --db-url=sqlite://sites/default/files/.example.sqlite  --account-name=admin --account-pass=admin -y
+drush cset system.site uuid 2d8eff92-0201-422f-9f54-73da6e20d4f6 -y
+drush cim -y
+
 # Composer template for Drupal projects
 
 [![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)

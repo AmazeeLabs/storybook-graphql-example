@@ -7,10 +7,6 @@
 /web/profiles/contrib/
 /web/libraries/
 
-# Ignore sensitive information
-/web/sites/*/settings.php
-/web/sites/*/settings.local.php
-
 # Ignore Drupal's file directory
 /web/sites/*/files/
 
@@ -22,3 +18,28 @@
 
 # Ignore .env files as they are personal
 /.env
+
+# Ignore modules and themes checkout out into sites/default for local development.
+/web/modules/development
+/web/themes/development
+node_modules
+
+# Ignore local development settings/services.
+/web/sites/*/settings.local.php
+/web/sites/*/services.local.yml
+
+cypress/videos
+cypress/screenshots
+cypress/integration/jira/**/*.feature
+
+docker-compose.override.yml
+
+# Ignore the development install log.
+.install.log
+
+# Ignore the silverback persistent snapshots directory
+.silverback-snapshots
+
+# Ignore Drupal console
+/console/
+
