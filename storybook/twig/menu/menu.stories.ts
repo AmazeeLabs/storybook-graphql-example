@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/html';
 import Menu from './menu.html.twig';
 
-const menuData = {
+export const menuData = {
   links: [
     {
       url: '#',
