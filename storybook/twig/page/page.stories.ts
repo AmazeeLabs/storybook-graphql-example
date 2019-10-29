@@ -5,7 +5,7 @@ import Page from './page.html.twig';
 import { menuData } from '../menu/menu.stories';
 
 const pageData = {
-  nav: menuData,
+  mainMenu: menuData,
 };
 
 storiesOf('Page', module)

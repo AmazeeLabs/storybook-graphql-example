@@ -1,11 +1,11 @@
 <div class="page {{ node.gettype }} ">
 
-  {% block header %}
-    {% include '@storybook/navigation-search/search.html.twig' %}
-  {% endblock %}
+{#  {% block header %}#}
+{#    {% include '@storybook/navigation-search/search.html.twig' %}#}
+{#  {% endblock %}#}
 
-  {% block nav %}
-    {% include '@storybook/menu/menu.html.twig' with nav %}
+  {% block menu %}
+    {% include '@storybook/menu/menu.html.twig' with mainMenu %}
   {% endblock %}
 
   <div class="page__content-wrapper">

@@ -1,0 +1,59 @@
+diff --git a/graphql_twig.module b/graphql_twig.module
+index 86b2d7b..5cefa10 100644
+--- a/graphql_twig.module
++++ b/graphql_twig.module
+@@ -1,5 +1,7 @@
+ <?php
+ 
++use Drupal\graphql\Entity\Server;
++
+ /**
+  * Implements hook_theme().
+  *
+@@ -49,3 +51,20 @@ function _graphql_twig_missing_template($variables) {
+     '%ext' => $variables['graphql_ext'],
+   ]) . '</div>';
+ }
++
++/**
++ * Returns the graphql server that should be used when running the queries.
++ *
++ * If there is no configured one, then the first available server will be
++ * returned.
++ *
++ * @return \Drupal\graphql\Entity\Server
++ */
++function graphql_twig_get_server() {
++  $server_id = \Drupal::config('graphql_twig')->get('server');
++  if (!empty($server_id)) {
++    return Server::load($server_id);
++  }
++  $servers = Server::loadMultiple();
++  return reset($servers);
++}
+diff --git a/src/Controller/RouteController.php b/src/Controller/RouteController.php
+index 56dd913..f257772 100644
+--- a/src/Controller/RouteController.php
++++ b/src/Controller/RouteController.php
+@@ -81,7 +81,7 @@ class RouteController extends ControllerBase {
+       return FALSE;
+     }
+     if ($_graphql_title_query) {
+-      $result = $this->queryProcessor->processQuery('default:default',
++      $result = $this->queryProcessor->processQuery(graphql_twig_get_server()->id(),
+         OperationParams::create([
+           'query' => $_graphql_title_query,
+           'variables' => $_graphql_arguments,
+diff --git a/src/GraphQLTemplateTrait.php b/src/GraphQLTemplateTrait.php
+index 34aacb2..86d5934 100644
+--- a/src/GraphQLTemplateTrait.php
++++ b/src/GraphQLTemplateTrait.php
+@@ -82,7 +82,7 @@ trait GraphQLTemplateTrait {
+     }
+ 
+ 
+-    $queryResult = $this->env->getQueryProcessor()->processQuery('default:default', OperationParams::create([
++    $queryResult = $this->env->getQueryProcessor()->processQuery(graphql_twig_get_server()->id(), OperationParams::create([
+       'query' => $query,
+       'variables' => $arguments,
+     ]));

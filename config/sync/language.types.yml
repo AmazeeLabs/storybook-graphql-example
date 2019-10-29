@@ -15,12 +15,10 @@ negotiation:
   language_interface:
     enabled:
       language-graphql: -999
-      language-workspace-and-url: -10
       language-selected: 12
     method_weights:
       language-graphql: -999
       language-user-admin: -10
-      language-workspace-and-url: -10
       language-url: -8
       language-session: -6
       language-user: -4

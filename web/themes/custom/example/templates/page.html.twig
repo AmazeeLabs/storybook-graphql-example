@@ -1,6 +1,9 @@
 {#graphql
 query mainPageQuery($node: String) {
-  ...Header
+  ...Menu
+  currentNode:pageNode(id: $node) {
+    nodeType
+  }
 }
 #}
 {% extends '@storybook/page/page.html.twig' %}
@@ -9,8 +12,8 @@ query mainPageQuery($node: String) {
   {% include '@storybook/navigation-search/search.html.twig' %}
 {% endblock %}
 
-{% block nav %}
-  {% include '@storybook/menu/menu.html.twig' with graphql only %}
+{% block menu %}
+  {% include '@storybook/menu/menu.html.twig' with graphql.mainMenu only %}
 {% endblock %}
 
 {% block content %}

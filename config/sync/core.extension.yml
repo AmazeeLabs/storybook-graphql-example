@@ -13,11 +13,9 @@ module:
   components: 0
   config: 0
   contact: 0
-  content_moderation: 0
   contextual: 0
   datetime: 0
   dblog: 0
-  delivery: 0
   devel: 0
   devel_entity_updates: 0
   dynamic_page_cache: 0
@@ -44,7 +42,6 @@ module:
   page_cache: 0
   path: 0
   rdf: 0
-  revision_tree: 0
   search: 0
   shortcut: 0
   system: 0
@@ -56,10 +53,6 @@ module:
   update: 0
   user: 0
   views_ui: 0
-  workflows: 0
-  workspaces: 0
-  workspaces_allowed_languages: 0
-  workspaces_negotiator_path: 0
   menu_link_content: 1
   content_translation: 10
   views: 10
