@@ -1,8 +1,7 @@
 /* stylelint-disable */
 .menu {
   width: 100%;
-  display: flex;
-  align-items: center;
+  height: 1000px;
 }
 
 /* General Menu Styling */
@@ -13,6 +12,7 @@
 
   li {
     list-style: none;
+    position: relative;
   }
 
   li a {
