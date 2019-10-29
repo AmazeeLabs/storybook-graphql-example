@@ -14,12 +14,6 @@ const javascript = {
       loader: 'babel-loader',
       options: {
         presets: [
-          [
-            '@babel/env',
-            {
-              targets: { chrome: '63', ie: '11' },
-            },
-          ],
           ['@babel/typescript'],
         ],
         plugins: [
