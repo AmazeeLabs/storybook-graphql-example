@@ -1,0 +1,115 @@
+/* stylelint-disable */
+.menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* General Menu Styling */
+.menu__list {
+  margin: 0 auto;
+  display: flex;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+
+  li a {
+    text-decoration: none;
+  }
+}
+
+.menu__dropdown {
+  position: absolute;
+  width: 250px;
+  top: 61px;
+  opacity: 0;
+  visibility: hidden;
+  transition: ease-out 0.35s;
+}
+
+.menu__list li {
+  padding: 20px;
+  background: #3556b7;
+  border-left: 1px solid #fff;
+}
+
+.menu__list li:first-child {
+  border: none;
+}
+
+.menu__list li a {
+  display: block;
+  padding: 2px 20px;
+  color: #fff;
+  font-family: arial;
+}
+
+.menu__list li:hover {
+  background: #359db7;
+  transition: ease-in 0.35s;
+}
+
+.menu__list li:hover a {
+  color: #fff;
+  transition: ease-in 0.35s;
+}
+
+
+/* First Level */
+.menu__subs {
+  left: -20px;
+  position: relative;
+  top: 0;
+  width: 220px;
+  border-left: none !important;
+  border-bottom: 1px solid #fff !important;
+}
+
+.menu__subs:last-child {
+  border: none !important;
+}
+
+.menu__item--hassubs:hover .menu__dropdown,
+.menu__item--hassubs .menu__subs--hassubs:hover .menu__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transition: ease-in 0.35s;
+}
+
+.menu__list li:hover ul a,
+.menu__list li:hover ul li ul li a {
+  color: white;
+}
+
+.menu__list li ul li:hover,
+.menu__list li ul li ul li:hover {
+  background: #359db7;
+  transition: ease-in-out 0.35s;
+}
+
+.menu__list li ul li:hover a,
+.menu__list li ul li ul li:hover a {
+  color: #fff;
+  transition: ease-in-out 0.35s;
+}
+
+
+/* Second Level */
+.menu__item--hassubs .menu__subs--hassubs .menu__dropdown .menu__subs {
+  left: 70px;
+  position: relative;
+  width: 220px;
+  top: 0;
+}
+
+.menu__item--hassubs .menu__subs--hassubs .menu__dropdown {
+  position: absolute;
+  width: 250px;
+  left: 150px;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: ease-out 0.35s;
+}

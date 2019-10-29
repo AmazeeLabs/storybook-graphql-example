@@ -1,0 +1,29 @@
+<nav class="menu">
+    <ul class="menu__list">
+        {% for item in links %}
+        <li class="menu__item {{ item.links is not empty ? 'menu__item--hassubs' }}">
+            <a href="{{ item.url }}">{{ item.label }}</a>
+            {% if item.links is not empty %}
+                <ul class="menu__dropdown">
+                    {% for dropdown in item.links %}
+                        <li class="menu__subs {{ dropdown.links is not empty ? 'menu__subs--hassubs' }}">
+                            <a href="{{ dropdown.url }}">{{ dropdown.label }}</a>
+
+                            {% if dropdown.links is not empty %}
+                                <ul class="menu__dropdown dropdown">
+                                    {% for dropdownL2 in dropdown.links %}
+                                        <li class="menu__subs">
+                                            <a href="{{ dropdownL2.url }}">{{ dropdownL2.label }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
