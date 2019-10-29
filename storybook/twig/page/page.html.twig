@@ -1,6 +1,10 @@
 <div class="page {{ node.gettype }} ">
 
   {% block header %}
+    {% include '@storybook/navigation-search/search.html.twig' %}
+  {% endblock %}
+
+  {% block nav %}
     {% include '@storybook/menu/menu.html.twig' with nav %}
   {% endblock %}
 

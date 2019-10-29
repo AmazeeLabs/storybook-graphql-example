@@ -1,2 +1,5 @@
 .page {
+  border: 1px #ccc solid;
+  padding: 10%;
+  margin: 1%;
 }
