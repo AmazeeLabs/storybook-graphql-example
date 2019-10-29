@@ -1,0 +1,18 @@
+{#graphql
+query mainPageQuery($node: String) {
+  ...Header
+}
+#}
+{% extends '@storybook/page/page.html.twig' %}
+
+{% block header %}
+  {% include '@storybook/navigation-search/search.html.twig' %}
+{% endblock %}
+
+{% block nav %}
+  {% include '@storybook/menu/menu.html.twig' with graphql only %}
+{% endblock %}
+
+{% block content %}
+  {{ page.content }}
+{% endblock %}
