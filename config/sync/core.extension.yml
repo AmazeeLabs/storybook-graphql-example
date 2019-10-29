@@ -22,6 +22,7 @@ module:
   devel_entity_updates: 0
   dynamic_page_cache: 0
   editor: 0
+  example_graphql: 0
   field: 0
   field_ui: 0
   file: 0
@@ -51,6 +52,7 @@ module:
   text: 0
   toolbar: 0
   tour: 0
+  typed_data: 0
   update: 0
   user: 0
   views_ui: 0
@@ -67,6 +69,8 @@ theme:
   classy: 0
   bartik: 0
   seven: 0
+  storybook: 0
+  example: 0
 profile: minimal
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

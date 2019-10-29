@@ -1,0 +1,10 @@
+uuid: 3874aa55-9a35-4f4c-b78e-352dbd1fdd4a
+langcode: en
+status: true
+dependencies: {  }
+name: example
+label: Example
+schema: example
+endpoint: /example
+debug: false
+batching: true
