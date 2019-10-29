@@ -1,0 +1,7 @@
+name: Example GraphQL
+type: module
+description: 'GraphQL schema for an example progressively decoupled site.'
+package: Example
+core: 8.x
+dependencies:
+- graphql

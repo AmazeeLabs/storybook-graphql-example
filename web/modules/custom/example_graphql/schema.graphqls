@@ -1,0 +1,32 @@
+scalar Date
+
+type Query {
+  menuByName(name: String!): Menu
+  pageNode(id: String): NodePage
+}
+
+type NodePage {
+  title: String!
+  nodeType: String
+  created: Int
+  updated: Int
+  category: String!
+}
+
+type Link {
+  url: String
+  title: String
+  class: String
+}
+
+type MenuLink {
+  url: String!
+  label: String
+  description: String
+  links: [MenuLink]
+}
+
+type Menu {
+  name: String!
+  links: [MenuLink]
+}
