@@ -1,0 +1,14 @@
+global-scripts:
+  js:
+    assets/js/macy.js: {}
+    assets/js/masonry-layout.js: {}
+linkifyjs:
+  js:
+    assets/js/linkify.min.js: {}
+    assets/js/linkify-jquery.min.js: {}
+    assets/js/linkify-plugin-hashtag.min.js: {}
+    assets/js/linkify.main.js: {}
+share:
+  version: 1.x
+  js:
+    assets/js/share.js: {}

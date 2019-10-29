@@ -13,6 +13,19 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal/graphql",
+                "version": "8.x-4.x-dev",
+                "type": "drupal-module",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/drupal-graphql/graphql.git",
+                    "reference": "8.x-4.x"
+                }
+            }
         }
     ],
     "require": {
@@ -29,7 +42,8 @@
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
+        "zaporylie/composer-drupal-optimizations": "^1.0",
+        "drupal/graphql": "8.x-4.x-dev#cb5a4ee56a3f78816a79a70923d68fc7d6ed06a3 as 3.0.0-rc3"
     },
     "require-dev": {
         "webflo/drupal-core-require-dev": "^8.7.0"
@@ -98,6 +112,8 @@
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
             }
+        },
+        "patches": {
         },
         "enable-patching": true,
         "merge-plugin": {

@@ -1,0 +1,10 @@
+name: Example
+type: theme
+description: Drupal 8 theme that uses Storybook components.
+core: 8.x
+base theme: storybook
+regions:
+  featured: Featured
+  content: Content
+libraries:
+  - example/global-scripts
