@@ -115,6 +115,9 @@
             }
         },
         "patches": {
+            "drupal/graphql_twig": {
+                "Configurable grapqhl twig server": "patches/graphql_twig/configurable_graphql_twig_server.patch"
+            }
         },
         "enable-patching": true,
         "merge-plugin": {

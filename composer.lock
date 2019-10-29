@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2e182d661161f5f2566e5c14716336c",
+    "content-hash": "ce96b2df8d5e9ade3e59dd0793050af9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3432,6 +3432,9 @@
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Configurable grapqhl twig server": "patches/graphql_twig/configurable_graphql_twig_server.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
