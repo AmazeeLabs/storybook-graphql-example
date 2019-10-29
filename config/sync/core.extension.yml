@@ -27,7 +27,6 @@ module:
   file: 0
   filter: 0
   graphql: 0
-  graphql_core: 0
   graphql_twig: 0
   help: 0
   history: 0
