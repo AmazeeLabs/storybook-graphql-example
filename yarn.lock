@@ -2372,7 +2372,7 @@ async@2.6.1:
   dependencies:
     lodash "^4.17.10"
 
-async@^2.1.5, async@^2.6.1, async@^2.6.2:
+async@^2.6.1, async@^2.6.2:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.3.tgz#d72625e2344a3656e3a3ad4fa749fa83299d82ff"
   integrity sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg==
@@ -11818,14 +11818,13 @@ twig-drupal-filters@^2.0.0:
     slugg "^1.2.1"
     twig "^1.12.0"
 
-twig-loader@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/twig-loader/-/twig-loader-0.5.1.tgz#14b8e283d1976ba80f32e894f171c4143021bfcf"
-  integrity sha512-l8GkQw6ZEFEMJlUf7yWrWNSWVL9OJRmTJXUrmTrR55cE4g8wiXGKmQNAbn56ZxbXiZC/KSC3i7ajrikkeep4Dw==
+"twig-loader@https://github.com/AmazeeLabs/twig-loader.git":
+  version "0.4.1"
+  resolved "https://github.com/AmazeeLabs/twig-loader.git#b43d17f2aed1211e4ec9abf6f1e96d2b7892ada0"
   dependencies:
-    async "^2.1.5"
     hasha "^3.0.0"
     loader-utils "^1.1.0"
+    map-cache "^0.2.2"
     schema-utils "^0.4.5"
     twig "^1.12.0"
     underscore "^1.9.1"
